@@ -48,12 +48,28 @@
   </style>
 </head>
 <body>
-<table class="custom-table"><tr><th>Date</th><th>Time</th><th>Topic</th><th>Meeting ID</th><th>Join URL</th><th>Details</th></tr><tr><td>12/01</td><td>1:00 PM</td><td>Topic One</td><td>85794627535</td><td><a href="#" style="color: #385988;">Link</a></td><td><button onclick="toggleRow('details1')">Show Details</button></td></tr><tr id="details1" class="collapsible-row"><td colspan="6"><span class="topic-title">Topic One</span><span class="description">This is a detailed description for Topic One. It provides more information about the subject, objectives, and key points.</span></td></tr><tr><td>12/02</td><td>2:00 PM</td><td>Topic Two</td><td>81625217807</td><td><a href="#" style="color: #385988;">Link</a></td><td><button onclick="toggleRow('details2')">Show Details</button></td></tr><tr id="details2" class="collapsible-row"><td colspan="6"><span class="topic-title">Topic Two</span><span class="description">This is a detailed description for Topic Two, explaining the session's main goals, highlights, themes, and terms used></span></td></tr></table>
+
+<table class="custom-table">
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Topic</th>
+    <th>Meeting ID</th>
+    <th>Join URL</th>
+    <th>Details</th>
+  </tr>
+
+  <!-- Topic Rows -->
+  <!-- Repeat for 15 topics -->
+<tr><td>12/01/2024</td><td>02:00 PM</td><td>Topic One</td><td>Remote</td><td>Speaker One</td><td><button onclick="toggleRow(&quot;details1&quot;)">Show Details</button></td></tr><tr id="details1" class="collapsible-row"><td colspan="6"><span class="topic-title">Topic One</span><span class="description">Description</span></td></tr><tr><td>12/02/2024</td><td>03:00 PM</td><td>Topic Two</td><td>341 New Albany Road, Moorestown, NJ 08057</td><td>Speaker Two</td><td><button onclick="toggleRow(&quot;details2&quot;)">Show Details</button></td></tr><tr id="details2" class="collapsible-row"><td colspan="6"><span class="topic-title">Topic Two</span><span class="description">Description Two</span></td></tr>
+</table>
+
 <script>
-function toggleRow(rowId) {
+  function toggleRow(rowId) {
     var row = document.getElementById(rowId);
     row.style.display = (row.style.display === "none" || row.style.display === "") ? "table-row" : "none";
-}
+  }
 </script>
+
 </body>
 </html>
